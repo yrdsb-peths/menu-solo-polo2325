@@ -34,7 +34,6 @@ public class Queue<Type>
     {
         Type item = first.item;
         first = first.next;
-
         if(isEmpty())
         {
             first = last;
