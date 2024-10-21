@@ -4,7 +4,7 @@ public class Stack<Type>
 
     private class Node
     {
-        private <Type> item;
+        private Type item;
         private Node next;
     }
 
@@ -30,6 +30,6 @@ public class Stack<Type>
 
     public Type peek()
     {
-        return first.item
+        return first.item;
     }
 }
