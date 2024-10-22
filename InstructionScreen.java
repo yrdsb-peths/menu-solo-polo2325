@@ -17,7 +17,7 @@ public class InstructionScreen extends World
 
     public void writeInsturctions()
     {
-        Label instructions = new Label("Instructions goes here", 100);
+        Label instructions = new Label("Instructions goes here", 50);
         addObject(instructions, 300, 200);
     }
 }
