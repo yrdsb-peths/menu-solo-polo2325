@@ -24,6 +24,14 @@ public class InstructionScreen extends World
 
         addObject(navigateLeftButton, 100, 340);
         addObject(navigateRightButton, 500, 340);
+
+        Button menuButton = new Button(this::goMenu);
+        addObject(menuButton, 100, 25);
+    }
+    
+    public void goMenu()
+    {
+        Greenfoot.setWorld(new MenuScreen());
     }
 
     public void writeInstructions()
@@ -33,23 +41,19 @@ public class InstructionScreen extends World
 
     public void navigateLeft()
     {
-        screenIndex--;
-        
-        if(screenIndex < 0)
+        if(screenIndex > 0)
         {
-            screenIndex = 2;
+            screenIndex--;
         }
         
         writeInstructions();
     }
 
     public void navigateRight()
-    {
-        screenIndex++;
-        
-        if(screenIndex > 2)
+    {        
+        if(screenIndex < 2)
         {
-            screenIndex = 0;
+            screenIndex++;
         }
         
         writeInstructions();
